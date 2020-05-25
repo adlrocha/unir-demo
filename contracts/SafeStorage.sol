@@ -1,13 +1,16 @@
-pragma solidity ^0.5.11;
+pragma solidity ^0.5.0;
 
-contract SimpleSample {
-    uint stateVar;
+contract simplestorage {
+  uint public storedData;
 
-    function set(uint x) public {
-        stateVar = x;
-    }
+  constructor(uint initVal) public {
+    storedData = initVal;
+  }
 
-    function get() public view returns (uint) {
-        return stateVar;
-    }
-}
+  function set(uint x) public {
+    storedData = x;
+  }
+
+  function get() view public returns (uint retVal) {
+    return storedData;
+  }
