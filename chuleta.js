@@ -22,3 +22,4 @@ web3.eth.defaultAccount = a;
  });
 
  contract = eth.contract(abi).at('0x1b0d56707583b32a1f5ceeb04a68a546f854af33')
+eth.getCode('0x1b0d56707583b32a1f5ceeb04a68a546f854af33')
