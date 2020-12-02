@@ -23,3 +23,6 @@ web3.eth.defaultAccount = a;
 
  contract = eth.contract(abi).at('0x1b0d56707583b32a1f5ceeb04a68a546f854af33')
 eth.getCode('0x1b0d56707583b32a1f5ceeb04a68a546f854af33')
+
+//geth attach http://10.141.8.11:8545
+//"0xbc869c21d631e122d35789942a573241ec04d2e4","4mFmfbLsSlUS9b5msSfx",0
