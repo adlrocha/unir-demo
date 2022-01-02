@@ -1,7 +1,7 @@
 a = eth.accounts[0]
 web3.eth.defaultAccount = a;
 
- abi and bytecode generated from simplestorage.sol:
+ // abi and bytecode generated from simplestorage.sol:
  // > solcjs --bin --abi simplestorage.sol
  var abi = [{"constant":true,"inputs":[],"name":"storedData","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"x","type":"uint256"}],"name":"set","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"get","outputs":[{"name":"retVal","type":"uint256"}],"payable":false,"type":"function"},{"inputs":[{"name":"initVal","type":"uint256"}],"payable":false,"type":"constructor"}];
 
@@ -21,7 +21,10 @@ web3.eth.defaultAccount = a;
  }
  });
 
- contract = eth.contract(abi).at('0x1b0d56707583b32a1f5ceeb04a68a546f854af33')
+contract = eth.contract(abi).at('0x1b0d56707583b32a1f5ceeb04a68a546f854af33')
+// Access contract storage
+contract.get()
+// Access contract code.
 eth.getCode('0x1b0d56707583b32a1f5ceeb04a68a546f854af33')
 
 //geth attach http://10.141.8.11:8545
